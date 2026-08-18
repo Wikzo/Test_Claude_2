@@ -25,6 +25,11 @@ body {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 24px;
+  width: 100%;
+}
+
+img, svg {
+  max-width: 100%;
 }
 
 /* Header */
@@ -246,7 +251,72 @@ body {
   font-size: 0.85rem;
 }
 
-@media (max-width: 640px) {
-  .header-inner { flex-direction: column; align-items: flex-start; }
-  .stats { gap: 18px; }
+/* Tablet */
+@media (max-width: 760px) {
+  .container { padding: 0 18px; }
+
+  .site-header { padding: 28px 0 24px; }
+
+  .header-inner { flex-direction: column; align-items: flex-start; gap: 18px; }
+
+  .stats {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .stat { flex: 1 1 0; }
+
+  .stat-label { max-width: none; }
+
+  .article-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .container { padding: 0 14px; }
+
+  .site-header { padding: 22px 0 20px; }
+
+  .brand { gap: 12px; }
+
+  .brand-icon { font-size: 34px; }
+
+  .brand h1 { font-size: 1.4rem; }
+
+  .tagline { font-size: 0.85rem; }
+
+  .stats { gap: 8px; }
+
+  .stat-value { font-size: 1.15rem; }
+
+  .stat-label { font-size: 0.68rem; }
+
+  .controls {
+    flex-direction: column;
+    margin: 22px 0 18px;
+  }
+
+  #searchInput,
+  #tagFilter {
+    width: 100%;
+  }
+
+  .article-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .card { padding: 16px; }
+
+  .card-meta { flex-wrap: wrap; gap: 4px; }
+
+  .card-footer { flex-direction: column; align-items: flex-start; }
+
+  .about { padding: 22px 0 8px; }
+
+  .site-footer { padding: 16px 0 32px; font-size: 0.8rem; }
 }
