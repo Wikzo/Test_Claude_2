@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wolf News Denmark</title>
+<meta name="description" content="A simple news roundup tracking wolves (ulve) in Denmark: population, sightings, livestock attacks, and management.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐺</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <span class="brand-icon" aria-hidden="true">🐺</span>
+      <div>
+        <h1>Wolf News Denmark</h1>
+        <p class="tagline">Tracking ulve (wolves) in Jutland — population, sightings &amp; policy</p>
+      </div>
+    </div>
+    <div class="stats" id="stats">
+      <div class="stat">
+        <span class="stat-value">49+</span>
+        <span class="stat-label">adult wolves (2026 est.)</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">11</span>
+        <span class="stat-label">territories in Jutland</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">0</span>
+        <span class="stat-label">recorded attacks on people</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="controls" aria-label="Filter articles">
+    <input type="search" id="searchInput" placeholder="Search articles (e.g. Oksbøl, livestock, sightings)…" aria-label="Search articles">
+    <select id="tagFilter" aria-label="Filter by topic">
+      <option value="all">All topics</option>
+      <option value="population">Population</option>
+      <option value="sightings">Sightings &amp; Safety</option>
+      <option value="livestock">Livestock &amp; Conflict</option>
+      <option value="policy">Management &amp; Policy</option>
+    </select>
+  </section>
+
+  <section id="articles" class="article-grid" aria-label="News articles"></section>
+
+  <p id="emptyState" class="empty-state" hidden>No articles match your search.</p>
+
+  <section class="about">
+    <h2>About this page</h2>
+    <p>
+      Wolves went extinct in Denmark around 1813 and returned naturally from Germany in 2012.
+      Since then the population has grown steadily and is now established across Jutland, which has
+      made wolves a recurring news topic — covering everything from population counts and livestock
+      attacks to encounters with tourists and the government's management response.
+      This page is a hand-curated set of links to recent coverage; it links out to the original
+      publishers rather than reproducing their articles.
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Curated list, not a live feed — links open the original source in a new tab. Last updated 2026-08-18.</p>
+  </div>
+</footer>
+
+<script src="articles.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
